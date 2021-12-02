@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=(localdb)\\MSSQLLocalDB;Database=Fockus;Trusted_Connection=True;MultipleActiveResultSets=true"
+  }
+}//Data Source=(localdb) MSSQLLocalDB;Initial Catalog=Fockus;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False

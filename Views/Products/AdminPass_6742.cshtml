@@ -1,0 +1,59 @@
+﻿@model AddNewProduct
+
+<div class="container">
+    <div class="row">
+        <h3>Добавить новый продукт</h3>
+        <form asp-action="AdminPass_6742" method="post" class="form-horizontal">
+            <div class="form-group">
+                <label asp-for="Name"></label>
+                <div class="col-md-5">
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="ShortDescription"></label>
+                <div class="col-md-5">
+                    <input asp-for="ShortDescription" class="form-control" />
+                    <span asp-validation-for="ShortDescription" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="LongDescription"></label>
+                <div class="col-md-5">
+                    <input asp-for="LongDescription" class="form-control" />
+                    <span asp-validation-for="LongDescription" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="img"></label>
+                <div class="col-md-5">
+                    <input asp-for="img" class="form-control" />
+                    <span asp-validation-for="img" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price"></label>
+                <div class="col-md-5">
+                    <input asp-for="Price" class="form-control" />
+                    <span asp-validation-for="Price" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="CategoryID"></label>
+                <div class="col-md-5">
+                    <input asp-for="CategoryID" class="form-control" />
+                    <span asp-validation-for="CategoryID" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="Categories"></label>
+                <div class="col-md-5">
+                    <input asp-for="Categories" class="form-control" />
+                    <span asp-validation-for="Categories" class="text-danger"></span>
+                </div>
+            </div>
+            <p><input class="btn btn-success mb-5 mt-3" type="submit" value="Добавить" /></p>
+        </form>
+    </div>
+</div>

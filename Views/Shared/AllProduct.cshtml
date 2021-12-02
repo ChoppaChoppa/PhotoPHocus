@@ -1,0 +1,10 @@
+﻿@model PHotoFockus.Data.models.Product
+
+<div class="col-lg-4">
+    <img class="img-thumbnail" src="@Model.img" alt="@Model.Name" />
+    <h2 calss="featurette-heading">@Model.Name</h2>
+    <p class="lead">@Model.ShortDescription</p>
+    <p class="lead">Цена: @Model.Price.ToString("c")</p>
+    @*col-lg-4 <p><a class="btn btn-warning" asp-controller="FockusCart" asp-action="AboutProduct" asp-route-id="@Model.id">Подробнее</a></p> *@
+    <p><a class="btn btn-lg btn-primary" asp-controller="FockusCart" asp-action="AboutProduct" asp-route-id="@Model.id" role="button">Подробнее</a></p>
+</div>

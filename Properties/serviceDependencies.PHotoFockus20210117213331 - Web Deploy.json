@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "type": "mssql.onprem",
+      "connectionId": "Server=(localdb)\\\\MSSQLLocalDB;Database=Fockus;Trusted_Connection=True;MultipleActiveResultSets=true",
+      "secretStore": "AzureAppSettings"
+    }
+  }
+}

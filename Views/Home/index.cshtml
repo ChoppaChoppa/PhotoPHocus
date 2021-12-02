@@ -1,0 +1,132 @@
+﻿@model HomeViewModel
+
+<style>
+    .carousel-item {
+        height:32rem;
+        width: 100%;
+        background-color: #777;
+        
+    }
+
+    .featurette-divider{
+        margin: 5rem 0;
+    }
+
+    .overlay-image{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top:0;
+        background-position: center;
+        background-size: cover;
+        opacity: 0.5;
+    }
+</style>
+
+<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+        <li data-bs-target="#myCarousel" data-bs-slide-to="1" class=""></li>
+        <li data-bs-target="#myCarousel" data-bs-slide-to="2" class=""></li>
+        <li data-bs-target="#myCarousel" data-bs-slide-to="3" class=""></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active" >
+        <div class="overlay-image" style="background-image: url(/img/fokus.jpg);"></div>
+            <div class="container">
+                <div class="carousel-caption text-start">
+                    <h1>Добро пожаловать!</h1>
+                    <p>Вас приветствует компания "Фокус", мы рады видеть вас на нашем сайте, вы можете перейти на страницу товаров и ознакомиться с перечнем наших продуктов, и сделать завказ</p>
+                    <p><a class="btn btn-lg btn-primary" asp-controller="Products" asp-action="List" role="button">Перейти к товарам</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-item" >
+            <div class="overlay-image" style="background-image: url(/img/main.png);"></div>
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Instagram</h1>
+                    <p>Подпишитесь на наш инстаграм, чтобы всегда быть в курсе новинок, и интересных товаров</p>
+                    <p><a class="btn btn-lg btn-primary" href="https://www.instagram.com/terek_fokus/" role="button">Перейти</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Another example headline.</h1>
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+
+            <div class="container">
+                <div class="carousel-caption text-end">
+                    <h1>Нужна помощь?</h1>
+                    <p>Вы можете связаться с нами для более точного уточнения информации, мы постараемся ответить на все ваши вопросы</p>
+                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Связаться с нами</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </a>
+</div>
+
+
+<div class="container marketing">
+
+            <hr class="featurette-divider">
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
+                    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                </div>
+                <div class="col-md-5">
+                    <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7 order-md-2">
+                  <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
+                  <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                </div>
+                <div class="col-md-5 order-md-1">
+                    <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: D:\УЧЕБА\MyProject\PhotoFoc\PHotoFockus\wwwroot\img\resize.img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
+                    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                </div>
+                <div class="col-md-5">
+                    <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+</div>

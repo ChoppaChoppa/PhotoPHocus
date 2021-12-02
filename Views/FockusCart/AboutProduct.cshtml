@@ -1,0 +1,49 @@
+﻿@model FockusCartViewModels
+
+<style>
+    .featurette-divider{
+        margin: 5rem 0;
+    }
+</style>
+
+<div class="container marketing">
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+
+        <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading">@Model.fockusCart._aboutProd.Name <span class="text-muted">@Model.fockusCart._aboutProd.ShortDescription</span></h2>
+            <p class="lead">@Model.fockusCart._aboutProd.LongDescription</p>
+            
+        </div>
+
+        <div class="col-md-5 order-md-1">
+            <img class="img-thumbnail" src="@Model.fockusCart._aboutProd.img" alt="@Model.fockusCart._aboutProd.Name"/>
+            
+        </div>
+
+    </div>
+
+    <div class="row featurette">
+
+        <div class="col-md-3 order-md-2">
+            <h2 class="featurette-heading">Цена: @Model.fockusCart._aboutProd.Price</h2>
+        </div>
+        
+        <hr class="featurette-divider">
+
+        <div class="col-md-9 order-md-1 mt-2">
+            <p><a class="btn btn-lg btn-primary" asp-controller="FockusCart" asp-action="addToCart" asp-route-id="@Model.fockusCart._aboutProd.id" role="button">В корзину</a></p>        
+
+        </div>
+
+    </div>
+    
+</div>
+
+@* <img class="img-thumbnail" src="@Model.fockusCart._aboutProd.img" alt="@Model.fockusCart._aboutProd.Name" />
+            <h2>@Model.fockusCart._aboutProd.Name</h2>
+            <p>@Model.fockusCart._aboutProd.LongDescription</p>
+            <p>Цена: @Model.fockusCart._aboutProd.Price</p>
+            <p><a class="btn btn-warning" asp-controller="FockusCart" asp-action="addToCart" asp-route-id="@Model.fockusCart._aboutProd.id">Добавть в карзину</a></p> *@

@@ -1,0 +1,19 @@
+﻿@model ProductsViewModels
+
+<title>Все продукты</title>
+
+
+
+<div class="container">
+   <h2 class="featurette-heading mt-2">Все продукты</h2>
+   <div class="row mt-5 mb-2">
+      @{
+         foreach (Product products in Model.AllProducts)
+         {
+            @Html.Partial("AllProduct", products);
+         }
+      }
+   </div>
+</div>
+
+

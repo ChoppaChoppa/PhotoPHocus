@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>PHokus</title>
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/Style.css" rel="stylesheet" type="text/css" />
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sticky-footer/">
+</head>
+
+<style>
+
+    element.style {
+    }
+
+    .dropdown, .dropend, .dropstart, .dropup {
+        position: relative;
+    }
+
+    .ml-auto, .mx-auto {
+        margin-left: unset;
+    }
+
+    /*.container{
+        max-width: 800px;
+    }*/
+
+    .site-header {
+        background-color: rgba(0, 0, 0, .85);
+        /*-webkit-backdrop-filter: saturate(180%) blur(20px);*/
+       /* backdrop-filter: saturate(180%) blur(20px);*/
+    }
+
+        .site-header a {
+            color: #999;
+            transition: ease-in-out color .15s;
+        }
+
+    a.py-2.d-none.d-md-inline-block {
+    }
+
+    .site-header a:hover {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+    .pb-1, .py-1 {
+        padding-bottom: .25rem !important;
+    }
+
+    .pt-1, .py-1 {
+        padding-top: .25rem !important;
+    }
+
+    .sticky-top {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 1020;
+    }
+
+    article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
+        display: block;
+    }
+
+    *, ::after, ::before {
+        box-sizing: border-box;
+    }
+
+    user agent stylesheet
+    nav {
+        display: block;
+    }
+
+    body {
+        margin: 0;
+        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #212529;
+        text-align: left;
+        background-color: #fff;
+    }
+
+    :root {
+        --blue: #007bff;
+        --indigo: #6610f2;
+        --purple: #6f42c1;
+        --pink: #e83e8c;
+        --red: #dc3545;
+        --orange: #fd7e14;
+        --yellow: #ffc107;
+        --green: #28a745;
+        --teal: #20c997;
+        --cyan: #17a2b8;
+        --white: #fff;
+        --gray: #6c757d;
+        --gray-dark: #343a40;
+        --primary: #007bff;
+        --secondary: #6c757d;
+        --success: #28a745;
+        --info: #17a2b8;
+        --warning: #ffc107;
+        --danger: #dc3545;
+        --light: #f8f9fa;
+        --dark: #343a40;
+        --breakpoint-xs: 0;
+        --breakpoint-sm: 576px;
+        --breakpoint-md: 768px;
+        --breakpoint-lg: 992px;
+        --breakpoint-xl: 1200px;
+        --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+        --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    }
+
+    html {
+        font-family: sans-serif;
+        line-height: 1.15;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        -ms-overflow-style: scrollbar;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    *, ::after, ::before {
+        box-sizing: border-box;
+    }
+
+    *, ::after, ::before {
+        box-sizing: border-box;
+    }
+</style>
+
+<body>
+    <nav class="container site-header sticky-top py-1">
+        <div class="container d-flex flex-column flex-md-row  col-md-5 justify-content-between">
+            <a class="py-2" asp-controller="Home" asp-action="index">
+                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="44" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     class="d-block mx-auto">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="14.31" y1="8" x2="20.05" y2="17.94"></line>
+                    <line x1="9.69" y1="8" x2="21.17" y2="8"></line>
+                    <line x1="7.38" y1="12" x2="13.12" y2="2.06"></line>
+                    <line x1="9.69" y1="16" x2="3.95" y2="6.06"></line>
+                    <line x1="14.31" y1="16" x2="2.83" y2="16"></line>
+                    <line x1="16.62" y1="12" x2="10.88" y2="21.94"></line>
+                </svg>
+            </a>
+            
+            <a class="py-2 d-none d-md-inline-block" asp-controller="Products" asp-action="List">
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Товары</font>
+                </font>
+            </a>
+
+            <a class="py-2 d-none d-md-inline-block" asp-controller="AboutUs" asp-action="AboutUsPage">
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Про нас</font>
+                </font>
+            </a>
+
+            <a class="py-2 d-none d-md-inline-block" href="#">
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Поддержка</font>
+                </font>
+            </a>
+
+            <a class="py-2 d-none d-md-inline-block" href="#">
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Корзина</font>
+                </font>
+            </a>
+        </div>
+    </nav>
+
+    <script src="~/js/bootstrap.min.js"></script>
+    
+</body>
+</html>
